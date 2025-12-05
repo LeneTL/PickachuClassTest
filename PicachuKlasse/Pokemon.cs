@@ -2,11 +2,18 @@
 
 namespace PicachuKlasse
 {
-    public class Pokemon
+    class Pokemon
     {
-        public string Name { get; set; }
-        public int Health { get; set; }
-        public int Level { get; set; }
+        public string Name;
+        public int Health;
+        public int Level;
+
+        public Pokemon(string name, int health, int level)
+        {
+            Name = name;
+            Health = health;
+            Level = level;
+        }
     }
-    
+
 }
