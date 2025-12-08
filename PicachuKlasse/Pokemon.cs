@@ -15,5 +15,4 @@ namespace PicachuKlasse
             Level = level;
         }
     }
-
 }

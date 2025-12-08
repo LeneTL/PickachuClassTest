@@ -1,13 +1,31 @@
-﻿namespace PicachuKlasse
+﻿using System;
+
+namespace PicachuKlasse
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var Pikachu = new Pokemon("Pikachu", 50, 10);
-            var Balbusaur = new Pokemon("Balbusaur", 60, 8);
-            Console.WriteLine($"{Pikachu.Name} is Level {Pikachu.Level} and has {Pikachu.Health}Hp");
-            Console.WriteLine($"{Balbusaur.Name} is Level {Balbusaur.Level} and has {Balbusaur.Health}Hp");
+            AddPokemon();
+
+        }
+
+        static void AddPokemon()
+        {
+            List<Pokemon> monster = new List<Pokemon>();
+
+            Pokemon Pikachu = new Pokemon("Pikachu", 50, 10);
+            Pokemon Balbasaur = new Pokemon("Balbusaur", 60, 8);
+
+            monster.Add(Pikachu);
+            monster.Add(Balbasaur);
+
+            Console.WriteLine("Pokemon in List:");
+
+            foreach (Pokemon pokemon in monster)
+            {
+                Console.WriteLine($"{pokemon.Name} is Level {pokemon.Level} and has {pokemon.Health}Hp");
+            }
         }
     }
 }
